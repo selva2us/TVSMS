@@ -1,0 +1,2 @@
+module VoteSmsHelper
+end

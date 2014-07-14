@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>      
+      <th>Person</th>      
+      <th>Score</th> 
+      <th>Message</th> 
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vote_sm.each do |key,value| %>
+      <tr>               
+        <td><%= key %></td>
+	<td><%= value %></td>
+	<td><%= "message" %></td>
+       </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vote sm', new_vote_sm_path %> |
+<%= link_to 'Back', vote_sms_path %>

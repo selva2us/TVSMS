@@ -1,0 +1,49 @@
+<%= form_for(@vote_sm) do |f| %>
+  <% if @vote_sm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vote_sm.errors.count, "error") %> prohibited this vote_sm from being saved:</h2>
+
+      <ul>
+      <% @vote_sm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vote_number %><br>
+    <%= f.number_field :vote_number %>
+  </div>
+  <div class="field">
+    <%= f.label :compaign_name %><br>
+    <%= f.text_field :compaign_name %>
+  </div>
+  <div class="field">
+    <%= f.label :validity %><br>
+    <%= f.text_field :validity %>
+  </div>
+  <div class="field">
+    <%= f.label :choice %><br>
+    <%= f.text_field :choice %>
+  </div>
+  <div class="field">
+    <%= f.label :conn %><br>
+    <%= f.text_field :conn %>
+  </div>
+  <div class="field">
+    <%= f.label :msisdn %><br>
+    <%= f.text_field :msisdn %>
+  </div>
+  <div class="field">
+    <%= f.label :guid %><br>
+    <%= f.text_field :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :short_code %><br>
+    <%= f.text_field :short_code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
